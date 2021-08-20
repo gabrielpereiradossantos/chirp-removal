@@ -1,0 +1,21 @@
+/* ==UserStyle==
+@name           Chirp Removal
+@namespace      github.com/gabrielpereiradossantos/chirp-removal
+@homepageURL    https://github.com/gabrielpereiradossantos/chirp-removal
+@version        1.0.0
+@description    Remove Chirp, new Twitter default font, from the microblogging service
+@author         Gabriel Pereira dos Santos
+@updateURL      https://raw.githubusercontent.com/gabrielpereiradossantos/chirp-removal/main/material-vector.user.css
+@preprocessor   stylus
+@var text       ui_font 'Custom font' '"font_name"'
+==/UserStyle== */
+
+@-moz-document domain("twitter.com") {
+    :root {
+        $fstack = -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif
+        --twitter-font: ui_font, $fstack !important;
+    }
+    .r-37j5jr {
+        font-family: var(--twitter-font);
+    }
+}
